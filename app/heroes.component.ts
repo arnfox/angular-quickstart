@@ -9,6 +9,7 @@ import { HeroService } from './hero.service';
       .selected {color: red}
     `],
   template: `
+    <div *ngIf="!heroes || !heroes.length">Loading heroes...</div>
     <ul>
       <li *ngFor="let hero of heroes">
         <span class="badge">{{hero.id}}</span>
